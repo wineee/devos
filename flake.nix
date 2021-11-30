@@ -1,7 +1,7 @@
 {
   description = "A highly structured configuration database.";
 
-  nixConfig.extra-experimental-features = "nix-command flakes ca-references";
+  nixConfig.extra-experimental-features = "nix-command flakes";
   nixConfig.extra-substituters = "https://nrdxp.cachix.org https://nix-community.cachix.org";
   nixConfig.extra-trusted-public-keys = "nrdxp.cachix.org-1:Fc5PSqY2Jm1TrWfm88l6cvGWwz3s93c6IOifQWnhNW4= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=";
 
@@ -24,19 +24,19 @@
       home.inputs.nixpkgs.follows = "nixos";
 
       darwin.url = "github:LnL7/nix-darwin";
-      darwin.inputs.nixpkgs.follows = "latest";
+      darwin.inputs.nixpkgs.follows = "nixos";
 
       deploy.url = "github:input-output-hk/deploy-rs";
-      deploy.inputs.nixpkgs.follows = "latest";
+      deploy.inputs.nixpkgs.follows = "nixos";
 
       agenix.url = "github:ryantm/agenix";
-      agenix.inputs.nixpkgs.follows = "latest";
+      agenix.inputs.nixpkgs.follows = "nixos";
 
       nvfetcher.url = "github:berberman/nvfetcher";
-      nvfetcher.inputs.nixpkgs.follows = "latest";
+      nvfetcher.inputs.nixpkgs.follows = "nixos";
 
       naersk.url = "github:nmattia/naersk";
-      naersk.inputs.nixpkgs.follows = "latest";
+      naersk.inputs.nixpkgs.follows = "nixos";
 
       nixos-hardware.url = "github:nixos/nixos-hardware";
     };
